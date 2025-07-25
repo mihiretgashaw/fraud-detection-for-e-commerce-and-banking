@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  python-app:
+    container_name: python-runner
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: python run_all.py
